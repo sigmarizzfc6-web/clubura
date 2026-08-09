@@ -91,9 +91,12 @@ header{text-align:center;padding:40px 20px 20px;border-bottom:1px solid var(--bo
 </div>
 <script>
 const defaultReviews=[
-{name:"Alex M.",rating:5,comment:"Ordered a custom design batch for our 5-a-side team. Quality is insane for €25 each with free shipping. Responded on TikTok super fast!"},
-{name:"Liam K.",rating:5,comment:"Got a pre-made jersey with my name on the back. Delivery was smooth and jersey fits great. Will order again."}
-];
+  {name:"Marcin",rating:5,comment:"Great kits and great quality for the price. The stetching and material used is better then expected. Overall happy with my purchase."},
+  {name:"max_carlin",rating:5,comment:"Really happy with my purchase! The item arrived quickly, was packaged really well, and looked exactly like the pictures. The quality is great and everything was as described. The ordering process was easy and delivery was smooth. I would definitely buy from this seller again and highly recommend them!"},
+  {name:"levi.angeli",rating:5,comment:"I would rate the service 5/5 Stars! It came out really clean and it felt like I was my pro clubs character! Definitely would buy again!"},
+  {name:"Alex M.",rating:5,comment:"Ordered a custom design batch for our 5-a-side team. Quality is insane for €25 each with free shipping. Responded on TikTok super fast!"},
+  {name:"Liam K.",rating:5,comment:"Got a pre-made jersey with my name on the back. Delivery was smooth and jersey fits great. Will order again."}
+]
 function displayReviews(){
 const c=document.getElementById("reviewsContainer");c.innerHTML="";
 const reviews=JSON.parse(localStorage.getItem("clubura_reviews"))||defaultReviews;

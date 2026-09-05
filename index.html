@@ -1362,28 +1362,33 @@ function escapeHtml(s){
 
 
 /* DISPLAY REVIEWS */
-
 function displayReviews(){
-
   const container =
     document.getElementById("reviewsContainer");
 
   container.innerHTML = "";
 
-  const savedReviews =
-    JSON.parse(localStorage.getItem("clubura_reviews"));
+  // Get reviews saved by this browser
+  let savedReviews = [];
 
-  const reviews =
-    savedReviews || defaultReviews;
+  try {
+    savedReviews =
+      JSON.parse(localStorage.getItem("clubura_user_reviews")) || [];
+  } catch(e) {
+    savedReviews = [];
+  }
 
+  // Always show ALL default reviews + any new reviews
+  const reviews = [
+    ...savedReviews,
+    ...defaultReviews
+  ];
 
   reviews.forEach(review => {
-
     const card =
       document.createElement("div");
 
     card.className = "review-card";
-
 
     const stars =
       getStars(Number(review.rating));
@@ -1395,62 +1400,55 @@ function displayReviews(){
     };
 
     const productLabel =
-      productNames[review.product] || "Jersey (Short Sleeve)";
+      productNames[review.product] ||
+      "Jersey (Short Sleeve)";
 
     const qtyLabel =
       review.qty
         ? `${review.qty} × ${productLabel}`
         : "";
 
-
     card.innerHTML = `
-
       <div class="review-header">
-
         <span class="reviewer-name">
           ${escapeHtml(review.name)}
         </span>
 
         <span class="stars">
-
           ${stars}
-
           <span class="review-score">
             ${Number(review.rating).toFixed(1)}/5
           </span>
-
         </span>
-
       </div>
 
-      ${qtyLabel ? `<span class="qty-badge">🛒 ${escapeHtml(qtyLabel)}</span>` : ""}
+      ${
+        qtyLabel
+          ? `<span class="qty-badge">🛒 ${escapeHtml(qtyLabel)}</span>`
+          : ""
+      }
 
-      ${review.comment ? `<p class="review-text">${escapeHtml(review.comment)}</p>` : ""}
-
+      ${
+        review.comment
+          ? `<p class="review-text">${escapeHtml(review.comment)}</p>`
+          : ""
+      }
     `;
 
-
     container.appendChild(card);
-
   });
-
 }
 
-
 /* SUBMIT REVIEW */
-
 document
 .getElementById("reviewForm")
 .addEventListener("submit", function(e){
-
   e.preventDefault();
-
 
   const qtyValue =
     Number(document.getElementById("qty").value);
 
   const review = {
-
     name:
       document.getElementById("name").value.trim(),
 
@@ -1465,35 +1463,30 @@ document
 
     comment:
       document.getElementById("comment").value.trim()
-
   };
 
+  let savedReviews = [];
 
-  const savedReviews =
-    JSON.parse(localStorage.getItem("clubura_reviews"));
+  try {
+    savedReviews =
+      JSON.parse(
+        localStorage.getItem("clubura_user_reviews")
+      ) || [];
+  } catch(e) {
+    savedReviews = [];
+  }
 
-
-  const reviews =
-    savedReviews || [...defaultReviews];
-
-
-  reviews.unshift(review);
-
+  savedReviews.unshift(review);
 
   localStorage.setItem(
-    "clubura_reviews",
-    JSON.stringify(reviews)
+    "clubura_user_reviews",
+    JSON.stringify(savedReviews)
   );
-
 
   displayReviews();
 
-
   this.reset();
-
 });
-
-
 /* SEE MORE JERSEYS */
 
 document

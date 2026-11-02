@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CLUBURA makes custom Pro Clubs jerseys, full kits and season awards for your team. Order through TikTok.">
+<meta name="theme-color" content="#0c0b10">
+<link rel="canonical" href="https://sigmarizzfc6-web.github.io/clubura/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0b10'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' font-family='Georgia,serif' font-weight='700' fill='%23d4af37'%3EC%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CLUBURA">
+<meta property="og:title" content="CLUBURA | Live Your Style">
+<meta property="og:description" content="CLUBURA makes custom Pro Clubs jerseys, full kits and season awards for your team. Order through TikTok.">
+<meta property="og:url" content="https://sigmarizzfc6-web.github.io/clubura/">
+<meta property="og:image" content="https://sigmarizzfc6-web.github.io/clubura/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CLUBURA | Live Your Style">
+<meta name="twitter:description" content="CLUBURA makes custom Pro Clubs jerseys, full kits and season awards for your team. Order through TikTok.">
+<meta name="twitter:image" content="https://sigmarizzfc6-web.github.io/clubura/og-image.png">
 <title>CLUBURA | Live Your Style</title>
 
 <style>
@@ -513,6 +529,121 @@ header{
     gap:3px;
   }
 }
+.card--plaque{--accent:var(--gold)}
+.card--trophy{--accent:var(--bronze)}
+.card--pack{--accent:var(--pitch)}
+.awards-head{margin-top:50px;text-align:center}
+.awards-head h2{font-size:1.8rem;margin-bottom:10px}
+.award-picker{margin-top:30px;background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 24px;scroll-margin-top:20px}
+.award-picker h3{font-size:1.4rem;text-align:center;letter-spacing:.5px;margin-bottom:6px}
+.award-group{margin-bottom:18px}
+.award-group h4{font-size:.85rem;color:var(--gold);letter-spacing:1px;margin-bottom:10px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.award{display:inline-flex;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:background .15s,border-color .15s,color .15s}
+.award:hover{border-color:var(--gold)}
+.award.on{background:var(--gold);border-color:var(--gold);color:#171208}
+.award--custom{border-style:dashed}
+.award-name{background:none;border:0;color:inherit;font:inherit;font-size:.85rem;font-weight:500;padding:8px 14px;cursor:pointer}
+.award.on .award-name{font-weight:700;padding-right:8px}
+.award-step{display:none;align-items:center;gap:4px;padding-right:6px}
+.award.on .award-step{display:inline-flex}
+.qty-btn{width:26px;height:26px;border-radius:50%;border:0;background:rgba(23,18,8,.16);color:#171208;font-size:1rem;font-weight:700;line-height:1;cursor:pointer}
+.qty-btn:hover{background:rgba(23,18,8,.28)}
+.award-qty{min-width:1.3em;text-align:center;font-weight:700;font-size:.9rem}
+.award-name:focus-visible,.qty-btn:focus-visible{outline:2px solid var(--gold-bright);outline-offset:-2px}
+.custom-help{color:var(--muted);font-size:.85rem;margin-bottom:10px}
+.custom-form{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.custom-form input{flex:1;min-width:200px;padding:10px;background:#000;border:1px solid var(--border);color:var(--text);border-radius:6px}
+.custom-form input:focus-visible{outline:2px solid var(--gold-bright);outline-offset:1px}
+.custom-form .cta-btn{margin-top:0;padding:10px 22px}
+.winner-rows{display:grid;gap:8px;margin-bottom:14px}
+.winner-row{display:grid;grid-template-columns:minmax(120px,1fr) 1.4fr;gap:10px;align-items:center}
+.winner-title{font-size:.85rem;font-weight:600}
+.winner-row input,.club-row input[type=text]{padding:10px;background:#000;border:1px solid var(--border);color:var(--text);border-radius:6px;width:100%}
+.winner-row input:focus-visible,.club-row input:focus-visible{outline:2px solid var(--gold-bright);outline-offset:1px}
+.club-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.club-row input[type=text]{flex:1;min-width:180px;width:auto}
+.badge-drop{display:inline-flex;align-items:center;padding:10px 16px;border:1px dashed var(--gold);color:var(--gold-bright);border-radius:6px;font-weight:600;font-size:.85rem;cursor:pointer;position:relative}
+.badge-drop:hover,.badge-drop:focus-within{background:#d4af3718}
+.sr-file{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.plaque{display:flex;align-items:center;gap:16px;margin-top:14px;padding:18px;border-radius:10px;border:2px solid var(--gold);background:linear-gradient(135deg,#1f1b12,#2b2412 50%,#1f1b12)}
+.plaque-badge{flex:none;width:72px;height:72px;border-radius:50%;border:1px dashed var(--gold);background:center/contain no-repeat;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--muted)}
+.plaque-award{font-family:'Oswald','Inter',sans-serif;font-size:1.1rem;letter-spacing:1px;color:var(--gold-bright)}
+.plaque-name{font-size:1.3rem;font-weight:700}
+.plaque-club{font-size:.8rem;color:var(--muted)}
+@media(max-width:600px){.winner-row{grid-template-columns:1fr}}
+.copy-fallback{width:100%;margin-top:10px;padding:10px;background:#000;border:1px solid var(--gold);color:var(--text);border-radius:6px;font:inherit;font-size:.85rem}
+.copy-fallback[hidden]{display:none}
+.pick-summary{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px;padding:14px 16px;background:#ffffff0d;border:1px dashed var(--border);border-radius:8px;font-weight:600}
+.pick-summary small{color:var(--muted);font-weight:400}
+#pickPrice{font-family:'Oswald','Inter',sans-serif;font-size:1.4rem;color:var(--gold-bright)}
+.pick-actions{text-align:center;margin-top:6px}
+.pick-msg{min-height:1.4em;margin-top:12px;font-size:.85rem;color:var(--pitch);text-align:center}
+
+/* KITS / AWARDS SWITCHER */
+.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 6px}
+.mode-tab{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);border:1px solid var(--border);border-top:3px solid var(--border);border-radius:14px;padding:16px 18px;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s}
+.mode-tab:hover{border-color:var(--gold)}
+.mode-tab:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+.mode-tab svg{width:36px;height:36px;flex:none;color:var(--muted);transition:color .15s}
+.mode-tab strong{display:block;font-family:'Oswald','Inter',sans-serif;font-size:1.25rem;letter-spacing:.5px;font-weight:600}
+.mode-tab small{display:block;color:var(--muted);font-size:.8rem;line-height:1.3}
+.mode-tab.active{background:var(--bg-alt);border-color:var(--gold)}
+.mode-tab.active svg{color:var(--gold)}
+@media(max-width:600px){
+  .mode-tab{flex-direction:column;text-align:center;padding:14px 10px;gap:6px}
+  .mode-tab small{font-size:.72rem}
+  .award-picker{padding:22px 16px}
+}
+@media(prefers-reduced-motion:reduce){.award,.mode-tab{transition:none}}
+#past-work .container{padding:0}
+
+/* SIZE GUIDE */
+.size-guide{margin-top:50px}
+.size-guide h2{text-align:center;margin-bottom:10px;font-size:1.8rem}
+.size-toggle{display:flex;justify-content:center;gap:8px;margin-bottom:18px}
+.size-pill{background:var(--card);border:1px solid var(--border);color:var(--text);padding:9px 24px;border-radius:20px;font-weight:600;font-size:.9rem;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.size-pill:hover{border-color:var(--gold)}
+.size-pill:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+.size-pill.active{background:var(--gold);border-color:var(--gold);color:#171208}
+.size-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:14px}
+.size-wrap[hidden]{display:none}
+.size-table{width:100%;border-collapse:collapse;min-width:480px;font-size:.9rem}
+.size-table th,.size-table td{padding:10px 12px;text-align:center;white-space:nowrap;border-bottom:1px dashed var(--border)}
+.size-table thead th{font-family:'Oswald','Inter',sans-serif;font-weight:600;letter-spacing:.5px;color:var(--gold-bright);background:var(--bg-alt);border-bottom:1px solid var(--border)}
+.size-table tbody th{text-align:left;font-weight:700;position:sticky;left:0;background:var(--card)}
+.size-table tr.group td{background:#ffffff0d;color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;text-align:left}
+.size-table tbody tr:last-child th,.size-table tbody tr:last-child td{border-bottom:0}
+.size-tips{margin:18px 0;padding:14px 16px 14px 34px;color:var(--muted);font-size:.85rem;background:#ffffff0d;border:1px dashed var(--border);border-radius:6px}
+.size-tips li{margin-bottom:4px}
+.size-tips strong{color:var(--text)}
+@media(prefers-reduced-motion:reduce){.size-pill{transition:none}}
+
+/* DELIVERY AND RETURNS */
+.policy{margin-top:50px;padding-top:24px;border-top:1px solid var(--border)}
+.policy h2{font-size:1.05rem;letter-spacing:1px;text-transform:uppercase;text-align:center;color:var(--muted);margin-bottom:14px}
+.policy h2 small{font-size:.75rem;letter-spacing:.5px;text-transform:none;font-weight:400}
+.policy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.policy h3{font-size:.9rem;color:var(--text);margin-bottom:4px;letter-spacing:.5px}
+.policy p{font-size:.8rem;color:var(--muted);line-height:1.5}
+.policy h3 small{font-size:.72rem;font-weight:400;color:var(--muted);letter-spacing:0}
+
+/* TOP NOTE */
+html{scroll-behavior:smooth}
+.top-note{text-align:center;font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.top-note a{color:var(--gold-bright);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.top-note a:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px;border-radius:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.reviews-list:not(.show-all) .extra-review{display:none}
+
+/* AWARDS LAUNCH TEASER */
+.awards-teaser{margin-top:30px}
+.awards-teaser[hidden],#awardsLive[hidden]{display:none}
+.teaser-card{max-width:560px;margin:0 auto;text-align:center;align-items:center}
+.teaser-card .card-icon{margin:0 auto 14px}
+.teaser-card h3{width:100%}
+.teaser-date{font-family:'Oswald','Inter',sans-serif;font-size:1.6rem;color:var(--gold-bright)!important;margin-bottom:6px!important}
+.teaser-count{color:var(--pitch)!important;font-weight:700;font-size:.85rem!important;margin-bottom:16px!important}
 </style>
 </head>
 
@@ -525,994 +656,12 @@ header{
 
 <div class="container">
 
-<!-- HOW TO ORDER -->
-
-<section class="hero">
-  <h2>How to Order</h2>
-  <p>You can order directly through us! Just DM our agents on TikTok with what you want to get started.</p>
-
-  <a href="https://www.tiktok.com/@sigmarizz.fc?_r=1&_t=ZN-98jjujgRbio"
-     target="_blank"
-     rel="noopener"
-     class="cta-btn">
-     DM @sigmarizz.fc on TikTok
-  </a>
-</section>
-
-
-<!-- PRICING -->
-
-<section class="pricing-section">
-
-  <div class="card card--jersey">
-
-    <div>
-      <div class="card-icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M16 6 L8 12 L11 20 L15 18 L15 42 L33 42 L33 18 L37 20 L40 12 L32 6 L28 9 C26.5 10.2 21.5 10.2 20 9 Z"/>
-        </svg>
-      </div>
-
-      <h3>Custom Jersey</h3>
-
-      <p>
-        A fully custom jersey — choose your design, colours,
-        badge, name and number.
-      </p>
-
-      <div class="discount-badge">🔥 Discounted Prices</div>
-
-      <div class="original-price">
-        Usually €30 per jersey
-      </div>
-
-      <ul class="price-list">
-        <li><span>1 Jersey</span><span>€27 <small class="saving">Save 10%</small></span></li>
-        <li><span>3 – 6 Jerseys</span><span>€26 each <small class="saving">Save 13%</small></span></li>
-        <li><span>7+ Jerseys</span><span>€25 each <small class="saving">Save 17%</small></span></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="badge-shipping">
-        ✅ Free shipping when you order more than 2 jerseys
-      </div>
-
-      <a href="https://www.tiktok.com/@sigmarizz.fc?_r=1&_t=ZN-98jjujgRbio"
-         target="_blank"
-         rel="noopener"
-         class="cta-btn cta-btn--card"
-         style="width:100%;text-align:center">
-         Order Jersey
-      </a>
-    </div>
-
-  </div>
-
-
-  <div class="card card--sleeve">
-
-    <div>
-      <div class="card-icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M17 4 C19.5 6.2 28.5 6.2 31 4 L34 9 L34 44 L14 44 L14 9 Z"/>
-          <path d="M17 4 L4 10 L2 34 L11 36 L14 18"/>
-          <path d="M31 4 L44 10 L46 34 L37 36 L34 18"/>
-        </svg>
-      </div>
-
-      <h3>Custom Long Sleeve</h3>
-
-      <p>
-        Fully custom long sleeve jerseys — choose your design,
-        colours, badge, name and number.
-      </p>
-
-      <div class="discount-badge">🔥 Discounted Price</div>
-
-      <div class="original-price">
-        Usually €33 per jersey
-      </div>
-
-      <ul class="price-list">
-        <li><span>1 Jersey</span><span>€29.99 <small class="saving">Save 9%</small></span></li>
-        <li><span>3 – 6 Jerseys</span><span>€28.99 each <small class="saving">Save 12%</small></span></li>
-        <li><span>7 – 10 Jerseys</span><span>€27.99 each <small class="saving">Save 15%</small></span></li>
-      </ul>
-
-      <p class="bulk-note">
-        📦 Ordering more than 10? Message our agents to discuss
-        further discounts.
-      </p>
-    </div>
-
-    <div>
-      <div class="badge-shipping">
-        ✅ Free shipping when you order more than 2 jerseys
-      </div>
-
-      <a href="https://www.tiktok.com/@sigmarizz.fc?_r=1&_t=ZN-98jjujgRbio"
-         target="_blank"
-         rel="noopener"
-         class="cta-btn cta-btn--card"
-         style="width:100%;text-align:center">
-         Order Long Sleeve
-      </a>
-    </div>
-
-  </div>
-
-
-  <div class="card card--kit">
-
-    <span class="tier-tag">Best Value</span>
-
-    <div>
-      <div class="card-icon">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M15 5 L7 10 L10 18 L14 16 L14 27 L34 27 L34 16 L38 18 L41 10 L33 5 L29 8 C27.3 9.2 20.7 9.2 19 8 Z"/>
-          <path d="M16 30 L16 41 L23 41 L23 34 L25 34 L25 41 L32 41 L32 30 Z"/>
-        </svg>
-      </div>
-
-      <h3>Full Kit Sets</h3>
-
-      <p>
-        Complete custom kit — jersey, shorts and socks in matching
-        colours, with your name, number and badge.
-      </p>
-
-      <div class="discount-badge">🔥 Discounted Price</div>
-
-      <div class="original-price">
-        Usually €45 per kit
-      </div>
-
-      <ul class="price-list">
-        <li><span>1 Kit</span><span>€36.99 <small class="saving">Save 18%</small></span></li>
-        <li><span>3 – 6 Kits</span><span>€35.99 each <small class="saving">Save 20%</small></span></li>
-        <li><span>7 – 10 Kits</span><span>€34.99 each <small class="saving">Save 22%</small></span></li>
-      </ul>
-
-      <p class="bulk-note">
-        📦 Ordering more than 10? Message our agents to discuss
-        further discounts.
-      </p>
-    </div>
-
-    <div>
-      <div class="badge-shipping">
-        ✅ Free shipping when you order more than 2 kits
-      </div>
-
-      <a href="https://www.tiktok.com/@sigmarizz.fc?_r=1&_t=ZN-98jjujgRbio"
-         target="_blank"
-         rel="noopener"
-         class="cta-btn cta-btn--card"
-         style="width:100%;text-align:center">
-         Order Full Kit
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     PAST WORK
-     ========================= -->
-
-<section id="past-work">
-  <div class="container">
-
-    <h2>Past Work</h2>
-
-    <p class="section-subtitle">
-      Check out some of our custom jersey designs.
-    </p>
-
-    <div class="gallery-grid" id="jerseyGallery">
-
-      <!-- =========================
-           DMARINK
-           ========================= -->
-
-      <div class="gallery-item">
-        <img
-          src="dmarink-pink-front.jpg"
-          alt="DMARINK Pink Edition Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            DMARINK Pink Edition — Front
-          </div>
-
-          <div class="gallery-desc">
-            Custom short sleeve jersey in pink with personalised
-            number 8 and club badge.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item">
-        <img
-          src="dmarink-pink-back.jpg"
-          alt="DMARINK Pink Edition Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            DMARINK Pink Edition — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised back featuring DMARINK and number 8.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           SAMMY
-           ========================= -->
-
-      <div class="gallery-item">
-        <img
-          src="sammy-black-long-sleeve-front.jpg"
-          alt="SAMMY Black Long Sleeve Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            SAMMY Black Long Sleeve — Front
-          </div>
-
-          <div class="gallery-desc">
-            Custom black long sleeve with club badge and
-            red and white detailing.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item">
-        <img
-          src="sammy-black-long-sleeve-back.jpg"
-          alt="SAMMY Black Long Sleeve Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            SAMMY Black Long Sleeve — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised back featuring SAMMY and number 10.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           SHINA
-           ========================= -->
-
-      <div class="gallery-item">
-        <img
-          src="shina-blue-red-front.jpg"
-          alt="SHINA Blue and Red Edition Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            SHINA Blue &amp; Red Edition — Front
-          </div>
-
-          <div class="gallery-desc">
-            Blue and red custom short sleeve with gold collar,
-            number 4 and club badge.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item">
-        <img
-          src="shina-blue-red-back.jpg"
-          alt="SHINA Blue and Red Edition Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            SHINA Blue &amp; Red Edition — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised back featuring SHINA and number 4.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           SEE MORE STARTS HERE
-           ========================= -->
-
-
-      <!-- =========================
-           YUSSIF
-           ========================= -->
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="yussif-red-black-front.jpg"
-          alt="YUSSIF Red and Black Edition Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            YUSSIF Red &amp; Black Edition — Front
-          </div>
-
-          <div class="gallery-desc">
-            Red and black custom short sleeve jersey with
-            bold graphic detailing.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="yussif-red-black-back.jpg"
-          alt="YUSSIF Red and Black Edition Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            YUSSIF Red &amp; Black Edition — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised back featuring YUSSIF and number 10.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           ORIGINAL RED
-           ========================= -->
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="red-front.jpg"
-          alt="Red Custom Jersey Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            Red Custom Jersey — Front
-          </div>
-
-          <div class="gallery-desc">
-            Custom red football jersey design.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="red-back.jpg"
-          alt="Red Custom Jersey Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            Red Custom Jersey — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised red jersey back.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           ORIGINAL YELLOW
-           ========================= -->
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="yellow-front.jpg"
-          alt="Yellow Custom Jersey Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            Yellow Custom Jersey — Front
-          </div>
-
-          <div class="gallery-desc">
-            Custom yellow football jersey design.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="yellow-back.jpg"
-          alt="Yellow Custom Jersey Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            Yellow Custom Jersey — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised yellow jersey back.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           ORIGINAL BLUE
-           ========================= -->
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="blue-front.jpg"
-          alt="Blue Custom Jersey Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            Blue Custom Jersey — Front
-          </div>
-
-          <div class="gallery-desc">
-            Custom blue football jersey design.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="blue-back.jpg"
-          alt="Blue Custom Jersey Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            Blue Custom Jersey — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised blue jersey back.
-          </div>
-        </div>
-      </div>
-
-
-      <!-- =========================
-           ORIGINAL WHITE
-           ========================= -->
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="white-front.jpg"
-          alt="White Custom Jersey Front"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            White Custom Jersey — Front
-          </div>
-
-          <div class="gallery-desc">
-            Custom white football jersey design.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="gallery-item extra-jersey">
-        <img
-          src="white-back.jpg"
-          alt="White Custom Jersey Back"
-        >
-
-        <div class="gallery-info">
-          <div class="gallery-title">
-            White Custom Jersey — Back
-          </div>
-
-          <div class="gallery-desc">
-            Personalised white jersey back.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         SEE MORE BUTTON
-         ========================= -->
-
-    <div class="see-more-wrap">
-      <button
-        class="see-more-btn"
-        id="seeMoreBtn"
-        type="button"
-      >
-        See More Jerseys
-      </button>
-    </div>
-
-  </div>
-</section>
-  
-<!-- VIDEOS -->
-
-<section class="videos-section">
-
-  <h2>Jersey Videos</h2>
-
-  <p class="subtitle">
-    Check out some of our jerseys in action.
-  </p>
-
-  <div class="video-grid">
-
-    <div class="video-card">
-
-      <video controls playsinline preload="metadata">
-        <source src="jersey-video-1.mp4" type="video/mp4">
-        Your browser does not support HTML video.
-      </video>
-
-      <div class="video-info">
-        <div class="video-title">Jersey Showcase</div>
-        <div class="video-desc">
-          A closer look at one of our latest jerseys.
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="video-card">
-
-      <video controls playsinline preload="metadata">
-        <source src="jersey-video-2.mp4" type="video/mp4">
-        Your browser does not support HTML video.
-      </video>
-
-      <div class="video-info">
-        <div class="video-title">Custom Jersey</div>
-        <div class="video-desc">
-          One of our recent custom jersey designs.
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="video-card">
-
-      <video controls playsinline preload="metadata">
-        <source src="jersey-video-3.mp4" type="video/mp4">
-        Your browser does not support HTML video.
-      </video>
-
-      <div class="video-info">
-        <div class="video-title">Customer Order</div>
-        <div class="video-desc">
-          Another finished jersey ready for its new owner.
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- EMAIL -->
-
-<section class="email-section">
-
-  <h2>Prefer Email?</h2>
-
-  <p class="subtitle">
-    If you'd rather get in touch by email, feel free to contact us
-    with any questions or enquiries.
-  </p>
-
-  <a href="mailto:sigmarizzfc6@gmail.com" class="cta-btn">
-    Email Us
-  </a>
-
-</section>
-
-
-<!-- REVIEWS -->
-
-<section class="reviews-section">
-
-  <h2>Customer Reviews</h2>
-
-  <p class="subtitle">
-    See what our customers have to say about their CLUBURA jerseys.
-  </p>
-
-
-  <!-- REVIEW FORM -->
-
-  <div class="review-form">
-
-    <h3>Leave a Review</h3>
-
-    <form id="reviewForm">
-
-      <label for="name">Name</label>
-
-      <input
-        type="text"
-        id="name"
-        required
-        placeholder="Your name"
-      >
-
-
-      <label for="rating">Rating</label>
-
-      <select id="rating">
-
-        <option value="5">★★★★★ (5/5)</option>
-        <option value="4.5">★★★★½ (4.5/5)</option>
-        <option value="4">★★★★☆ (4/5)</option>
-        <option value="3.5">★★★½☆ (3.5/5)</option>
-        <option value="3">★★★☆☆ (3/5)</option>
-        <option value="2.5">★★½☆☆ (2.5/5)</option>
-        <option value="2">★★☆☆☆ (2/5)</option>
-        <option value="1.5">★½☆☆☆ (1.5/5)</option>
-        <option value="1">★☆☆☆☆ (1/5)</option>
-
-      </select>
-
-
-      <label for="product">What did you order?</label>
-
-      <select id="product">
-        <option value="jersey">Jersey (Short Sleeve)</option>
-        <option value="longsleeve">Long Sleeve Jersey</option>
-        <option value="kit">Full Kit</option>
-      </select>
-
-
-      <label for="qty">How many did you order?</label>
-
-      <input
-        type="number"
-        id="qty"
-        min="1"
-        placeholder="e.g. 1"
-      >
-
-
-      <label for="comment">Review</label>
-
-      <textarea
-        id="comment"
-        rows="3"
-        required
-        placeholder="Tell us about your jersey..."
-      ></textarea>
-
-
-      <button type="submit">
-        Submit Review
-      </button>
-
-    </form>
-
-  </div>
-
-
-  <!-- REVIEWS -->
-
-  <div class="reviews-list" id="reviewsContainer"></div>
-
-</section>
-
-</div>
-
-
-<script>
-
-/* DEFAULT REVIEWS */
-
-const defaultReviews = [
-  {
-    name:"_matyyysek_0",
-    rating:4.5,
-    qty:1,
-    product:"jersey",
-    comment:"The jersey I ordered looks great and has brilliant quality. Price-wise it was also really cheap. The only thing was that it took a bit over a week to arrive, but that may have been because of where I was ordering it to. Overall, the service was good, so I give it 4.5/5 stars."
-  },
-  {
-    name:"Chris",
-    rating:5,
-    qty:3,
-    product:"jersey",
-    comment:"Extremely happy with the jersey. Will buy again."
-  },
-  {
-    name:"Marcin",
-    rating:5,
-    qty:1,
-    product:"jersey",
-    comment:"Great kits and great quality for the price. The stretching and material used is better than expected. Overall happy with my purchase."
-  },
-  {
-    name:"max_carlin",
-    rating:5,
-    qty:3,
-    product:"jersey",
-    comment:"Really happy with my purchase! The item arrived quickly, was packaged really well, and looked exactly like the pictures. The quality is great and everything was as described. The ordering process was easy and delivery was smooth. I would definitely buy from this seller again and highly recommend them!"
-  },
-  {
-    name:"levi.angeli",
-    rating:5,
-    qty:1,
-    product:"jersey",
-    comment:"I would rate the service 5/5 Stars! It came out really clean and it felt like I was my pro clubs character! Definitely would buy again!"
-  },
-  {
-    name:"Alex M.",
-    rating:5,
-    qty:5,
-    product:"jersey",
-    comment:"Ordered a custom design batch for our 5-a-side team. Quality is insane for €25 each with free shipping. Responded on TikTok super fast!"
-  },
-  {
-    name:"Liam K.",
-    rating:5,
-    qty:1,
-    product:"jersey",
-    comment:"Got a custom jersey with my name on the back. Delivery was smooth and jersey fits great. Will order again."
-  },
-  {
-    name:"Nick Mazza",
-    rating:4,
-    qty:2,
-    product:"jersey",
-    comment:"Delivery took a tad long but other than that had no complaints."
-  },
-  {
-    name:"Josh Cross",
-    rating:5,
-    qty:2,
-    product:"jersey",
-    comment:"5 stars from me, 100%."
-  },
-  {
-    name:"Alistair Copeland",
-    rating:4,
-    qty:2,
-    product:"jersey",
-    comment:""
-  }
-];
-
-
-/* CREATE HALF-STAR DISPLAY */
-
-function getStars(rating){
-
-  let stars = "";
-
-  for(let i = 1; i <= 5; i++){
-
-    if(rating >= i){
-      stars += "★";
-    }
-
-    else if(rating >= i - 0.5){
-      stars += "★";
-    }
-
-    else{
-      stars += "☆";
-    }
-
-  }
-
-  return stars;
-}
-
-
-/* ESCAPE USER INPUT */
-
-function escapeHtml(s){
-
-  return String(s).replace(
-    /[&<>"']/g,
-    m => ({
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#039;"
-    }[m])
-  );
-
-}
-
-
-/* DISPLAY REVIEWS */
-function displayReviews(){
-  const container =
-    document.getElementById("reviewsContainer");
-
-  container.innerHTML = "";
-
-  // Get reviews saved by this browser
-  let savedReviews = [];
-
-  try {
-    savedReviews =
-      JSON.parse(localStorage.getItem("clubura_user_reviews")) || [];
-  } catch(e) {
-    savedReviews = [];
-  }
-
-  // Always show ALL default reviews + any new reviews
-  const reviews = [
-    ...savedReviews,
-    ...defaultReviews
-  ];
-
-  reviews.forEach(review => {
-    const card =
-      document.createElement("div");
-
-    card.className = "review-card";
-
-    const stars =
-      getStars(Number(review.rating));
-
-    const productNames = {
-      jersey:"Jersey (Short Sleeve)",
-      longsleeve:"Long Sleeve Jersey",
-      kit:"Full Kit"
-    };
-
-    const productLabel =
-      productNames[review.product] ||
-      "Jersey (Short Sleeve)";
-
-    const qtyLabel =
-      review.qty
-        ? `${review.qty} × ${productLabel}`
-        : "";
-
-    card.innerHTML = `
-      <div class="review-header">
-        <span class="reviewer-name">
-          ${escapeHtml(review.name)}
-        </span>
-
-        <span class="stars">
-          ${stars}
-          <span class="review-score">
-            ${Number(review.rating).toFixed(1)}/5
-          </span>
-        </span>
-      </div>
-
-      ${
-        qtyLabel
-          ? `<span class="qty-badge">🛒 ${escapeHtml(qtyLabel)}</span>`
-          : ""
-      }
-
-      ${
-        review.comment
-          ? `<p class="review-text">${escapeHtml(review.comment)}</p>`
-          : ""
-      }
-    `;
-
-    container.appendChild(card);
-  });
-}
-
-/* SUBMIT REVIEW */
-document
-.getElementById("reviewForm")
-.addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const qtyValue =
-    Number(document.getElementById("qty").value);
-
-  const review = {
-    name:
-      document.getElementById("name").value.trim(),
-
-    rating:
-      Number(document.getElementById("rating").value),
-
-    qty:
-      qtyValue > 0 ? qtyValue : null,
-
-    product:
-      document.getElementById("product").value,
-
-    comment:
-      document.getElementById("comment").value.trim()
-  };
-
-  let savedReviews = [];
-
-  try {
-    savedReviews =
-      JSON.parse(
-        localStorage.getItem("clubura_user_reviews")
-      ) || [];
-  } catch(e) {
-    savedReviews = [];
-  }
-
-  savedReviews.unshift(review);
-
-  localStorage.setItem(
-    "clubura_user_reviews",
-    JSON.stringify(savedReviews)
-  );
-
-  displayReviews();
-
-  this.reset();
-});
-/* SEE MORE JERSEYS */
-
-document
-.getElementById("seeMoreBtn")
-.addEventListener("click", function(){
-
-  const gallery =
-    document.getElementById("jerseyGallery");
-
-
-  gallery.classList.toggle("show-all");
-
-
-  this.textContent =
-    gallery.classList.contains("show-all")
-      ? "Show Less"
-      : "See More Jerseys";
-
-});
-
-
-/* LOAD REVIEWS */
-
-displayReviews();
-
-</script>
-
-</body>
-</html>
+<!-- WHAT ARE YOU AFTER? -->
+
+<nav class="mode-switch" role="tablist" aria-label="Choose what to order">
+  <button type="button" role="tab" id="tab-kits" class="mode-tab active" aria-selected="true" aria-controls="panel-kits">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 6 L8 12 L11 20 L15 18 L15 42 L33 42 L33 18 L37 20 L40 12 L32 6 L28 9 C26.5 10.2 21.5 10.2 20 9 Z"/></svg>
+    <span><strong>Kits</strong><small>Jerseys, long sleeves and full kits</small></span>
+  </button>
+  <button type="button" role="tab" id="tab-awards" class="mode-tab" aria-selected="false" aria-controls="panel-awards" tabindex="-1">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M14 6 L34 6 L34 18 C34 25 29 29 24 29
